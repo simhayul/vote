@@ -1,0 +1,10 @@
+# netlify.toml
+
+[build]
+  functions = "netlify/functions"  # 서버리스 함수 경로 설정
+  publish = "public"  # 정적 파일들이 위치한 폴더
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
